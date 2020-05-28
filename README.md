@@ -14,3 +14,7 @@
 - 以 [`Flask-RESTful`](https://pypi.org/project/Flask-RESTful/) 框架實作 RESTful API 伺服器應用程式。
 - 以 [`Flask-JWT`](https://pypi.org/project/Flask-JWT/) 套件實作 JSON Web Token (JWT) 使用者驗證機制。
 - 使用 `RequestParser` 解析使用者輸入的 JSON 資料。
+
+### Section 5
+- 導入 `sqlite3`，改為從資料庫存取使用者和商品資訊。
+- 實作使用者註冊機制。
