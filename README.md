@@ -13,13 +13,16 @@
 - 以 Postman 應用程式進行 API 測試。
 
 ### Section 4
-- 以 [`Flask-RESTful`](https://pypi.org/project/Flask-RESTful/) 框架實作 RESTful API 伺服器應用程式。
-- 以 [`Flask-JWT`](https://pypi.org/project/Flask-JWT/) 套件實作 JSON Web Token (JWT) 使用者驗證機制。
+- 以 [`Flask-RESTful`](https://pypi.org/project/Flask-RESTful/) 實作 RESTful API 伺服器應用程式。
+- 以 [`Flask-JWT`](https://pypi.org/project/Flask-JWT/) 實作 JSON Web Token (JWT) 使用者驗證機制。
 - 使用 `RequestParser` 解析使用者輸入的 JSON 資料。
 
 ### Section 5
 - 導入 `sqlite3`，改為從資料庫存取使用者和商品資訊。
 - 實作使用者註冊機制。
+
+### Section 6
+- 導入 [`Flask-SQLAlchemy`](https://pypi.org/project/flask-sqlalchemy/)，以 ORM 機制操作資料庫。
 
 
 ## Advanced
