@@ -1,7 +1,9 @@
 # REST APIs with Flask
-"[REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/)" 和 "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 兩門課的課程程式碼，以 Flask 建立符合 RESTful API 伺服器應用程式。
+以 Flask 建立符合 REST 風格的 API 伺服器應用程式。
 
 ## Basics
+內容源自於 Udemy 的 "[REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/)" 線上課程。
+
 ### Section 3
 - 初探 Flask 網頁框架，以 decorator 設定網頁應用程式的 route。
 - 了解 GET, POST, PUT, DELETE 等常見的 HTTP 請求方法。
@@ -18,3 +20,7 @@
 ### Section 5
 - 導入 `sqlite3`，改為從資料庫存取使用者和商品資訊。
 - 實作使用者註冊機制。
+
+
+## Advanced
+內容源自於 Udemy "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 線上課程。
