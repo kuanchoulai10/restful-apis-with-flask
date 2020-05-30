@@ -23,7 +23,7 @@
 
 ### Section 6
 - 導入 [`Flask-SQLAlchemy`](https://pypi.org/project/flask-sqlalchemy/)，以 ORM 機制操作資料庫。
-
+- 加入商店資訊，與商品為一對多的關聯關係。
 
 ## Advanced
 內容源自於 Udemy "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 線上課程。
