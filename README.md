@@ -25,5 +25,16 @@
 - 導入 [`Flask-SQLAlchemy`](https://pypi.org/project/flask-sqlalchemy/)，以 ORM 機制操作資料庫。
 - 加入商店資訊，與商品為一對多的關聯關係。
 
+### Section 8
+將 Flask 應用程式部署在 Heroku 上，並使用 Heroku 提供的 PostgresSQL，步驟：
+1. 在本機端增修專案內容，如加入 `Procfile`, `runtime.txt`, `uwsgi.ini`等，接著 `commit` 並 `push` 至 GitHub 上的指定 repo。
+2. 在 Heroku 官方網站註冊帳號，接著創建一個應用程式並與 GitHub 指定 repo 連線，再來加入 buildpack `heroku/python` 和 add-ons `Heroku Postgres`。
+3. 在本機端安裝 Heroku CLI（參考[這裡](https://devcenter.heroku.com/articles/heroku-cli)）並透過 `heroku login` 指令登入 Heroku。
+4. 在本機端透過 `heroku git:remote -a <app-name>` 指令，加入 Heroku 遠端節點。
+5. 在本機端透過 `git subtree push --prefix basics/section8 heroku master` 指令，將當前專案內容的子目錄 `push` 至 Heroku 的遠端節點並部署上線。
+
+測試：
+連線至[這裡](http://rest-apis-with-flask.herokuapp.com/stores)，取得資料庫當中所有的商店及其商品，以 `JSON` 格式回傳。
+
 ## Advanced
 內容源自於 Udemy "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 線上課程。
