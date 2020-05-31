@@ -36,5 +36,17 @@
 測試：
 連線至[這裡](http://rest-apis-with-flask.herokuapp.com/stores)，取得資料庫當中所有的商店及其商品，以 `JSON` 格式回傳。
 
-## Advanced
+### Section 9
+將 Flask 應用程式部署在 DigitalOcean 提供的 Droplet 虛擬主機上，步驟：
+1. 註冊 DigitalOcean 帳號並創建個 Droplet 虛擬主機，作業系統為 Ubuntu 16.04，接著設定 SSH 連線，在本機端使用 PuTTY 以 SSH 連線至遠端虛擬主機。
+2. 在作業系統當中創建一個新的使用者。
+3. 安裝並設定 PostgreSQL 資料庫，包括在 PostgreSQL 當中創建新使用者以及資料庫，並設定相關權限。
+4. 安裝並設定 Nginx 伺服器，包括防火牆設定、錯誤頁面、uwsgi 參數等。
+5. 設定 Python 虛擬環境，接著安裝專案所需套件，並把專案內容從 GitHub `clone` 下來。
+6. 設定個 Ubuntu 服務，用來開啟 uwsgi 伺服器，負責執行我們的 Flask 應用程式，包括日誌檔儲存目錄、跑幾個程序、幾個執行緒等。
+
+測試：
+連線至[這裡](http://64.225.122.125/stores)（創建日期 2020/05/30），取得資料庫當中所有的商店及其商品，以 `JSON` 格式回傳。
+
+## Advance
 內容源自於 Udemy "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 線上課程。
