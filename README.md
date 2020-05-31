@@ -48,5 +48,11 @@
 測試：
 連線至[這裡](http://64.225.122.125/stores)（創建日期 2020/05/30），取得資料庫當中所有的商店及其商品，以 `JSON` 格式回傳。
 
+### Section 10
+[電子書](https://school-of-code.gitbooks.io/rest-apis-with-flask-and-python/content/domains-and-https/what-is-a-domain.html)
+- 註冊域名、設定 DNS 伺服器。
+- 取得 SSL 數位憑證，以 https 通訊協定連線，設置 Nginx。
+
+
 ## Advance
 內容源自於 Udemy "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 線上課程。
