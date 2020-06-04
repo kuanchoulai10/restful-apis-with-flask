@@ -65,3 +65,10 @@
 
 ## Advance
 內容源自於 Udemy "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 線上課程。
+
+### Section 1
+為了接下來的課程內容，做了幾項事情準備：
+- 簡化驗證機制。
+- 加入 type hinting。
+- 統一程式碼風格。
+- 所有 `Resource` 的方法統一改為類別方法（使用 `@classmethod`）。
