@@ -2,7 +2,7 @@
 以 Flask 建立符合 REST 風格的 API 伺服器應用程式。
 
 ## Basics
-內容源自於 Udemy 的 "[REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/)" 線上課程。
+[證書](https://www.udemy.com/certificate/UC-7fddb0fd-9c04-4579-86f5-7b9dda42f9b3/)，內容源自於 Udemy 的 "[REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/)" 線上課程。
 
 ### Section 3
 - 初探 Flask 網頁框架，以 decorator 設定網頁應用程式的 route。
@@ -52,6 +52,15 @@
 [電子書](https://school-of-code.gitbooks.io/rest-apis-with-flask-and-python/content/domains-and-https/what-is-a-domain.html)
 - 註冊域名、設定 DNS 伺服器。
 - 取得 SSL 數位憑證，以 https 通訊協定連線，設置 Nginx。
+
+### Section 11
+導入 [`Flask-JWT-Extended`](https://pypi.org/project/Flask-JWT-Extended/)：
+- 實作 token-refreshing 機制，提升用戶瀏覽體驗，不需要定期重新輸入帳號密碼，同時設定重要操作時仍需重新登入，提升安全性（使用 `@jwt_refresh_token_required`, `create_refresh_token()`, `create_access_token()` 等）。
+- 針對各個權限的請求，如訪客、一般使用者、管理員，回應相對應的資料（使用 `@jwt.user_claims_loader`, `@jwt_optional`, `get_jwt_claims()` 等）。
+- 針對各個權限錯誤的請求，回傳相對應的錯誤訊息（使用 `@jwt.expired_token_loader`, `@jwt.invalid_token_loader`, `@jwt.needs_fresh_token_loader` 等）。
+- 以黑名單（blacklist）設定，實作登出機制（使用 `@jwt.token_in_blacklist_loader`, `get_raw_jwt()` 等）。
+
+[電子書](https://arac.tecladocode.com/)
 
 
 ## Advance
