@@ -72,3 +72,8 @@
 - 加入 type hinting。
 - 統一程式碼風格。
 - 所有 `Resource` 的方法統一改為類別方法（使用 `@classmethod`）。
+
+### Section 2
+導入 [`marshmallow`](https://pypi.org/project/marshmallow/), [`flask-marshmallow`](https://pypi.org/project/flask-marshmallow/) 和 [`marshmallow-sqlalchemy`](https://pypi.org/project/marshmallow-sqlalchemy/)：
+- 透過定義好每個 `Resource` 的 `Schema`，簡化「請求解析」、「創建 `Model` 物件」、「回傳 JSON」的過程。
+
