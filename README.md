@@ -77,3 +77,7 @@
 導入 [`marshmallow`](https://pypi.org/project/marshmallow/), [`flask-marshmallow`](https://pypi.org/project/flask-marshmallow/) 和 [`marshmallow-sqlalchemy`](https://pypi.org/project/marshmallow-sqlalchemy/)：
 - 透過定義好每個 `Resource` 的 `Schema`，簡化「請求解析」、「創建 `Model` 物件」、「回傳 JSON」的過程。
 
+### Section 3
+- 實作使用者電子信箱認證流程（使用 [Mailgun](https://www.mailgun.com/) 服務）。
+- 在專案中使用 `.env` 檔案儲存敏感資料。
+- 在 [`Flask-RESTful`](https://pypi.org/project/Flask-RESTful/) 框架中回傳 `.html` 檔案（使用 `make_response()` 和 `render_template()`）。
