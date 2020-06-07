@@ -81,3 +81,8 @@
 - 實作使用者電子信箱認證流程（使用 [Mailgun](https://www.mailgun.com/) 服務）。
 - 在專案中使用 `.env` 檔案儲存敏感資料。
 - 在 [`Flask-RESTful`](https://pypi.org/project/Flask-RESTful/) 框架中回傳 `.html` 檔案（使用 `make_response()` 和 `render_template()`）。
+
+### Section 4
+優化使用者電子信箱認證流程：
+- 有效認證期限、重傳認證信。
+- 專案程式架構優化（抽出 `confirmation` 功能作為「資源」看待）。
