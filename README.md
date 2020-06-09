@@ -86,3 +86,8 @@
 優化使用者電子信箱認證流程：
 - 有效認證期限、重傳認證信。
 - 專案程式架構優化（抽出 `confirmation` 功能作為「資源」看待）。
+
+### Section 6
+- 以更安全的方式配置應用程式（使用 `from_object()` 和 `from_envvar()`等）。
+- 瞭解 `WSGI`, `uwsgi`, `uWSGI`, `Werkzeug` 之間的關係。
+- 導入 [`Flask-Uploads`](https://pypi.org/project/Flask-Uploads/)，實作圖片、大頭貼上傳、下載、刪除等功能（使用 `UploadSet`, `FileStorage`等）。
