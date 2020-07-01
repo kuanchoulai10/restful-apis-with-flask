@@ -91,3 +91,7 @@
 - 以更安全的方式配置應用程式（使用 `from_object()` 和 `from_envvar()`等）。
 - 瞭解 `WSGI`, `uwsgi`, `uWSGI`, `Werkzeug` 之間的關係。
 - 導入 [`Flask-Uploads`](https://pypi.org/project/Flask-Uploads/)，實作圖片、大頭貼上傳、下載、刪除等功能（使用 `UploadSet`, `FileStorage`等）。
+
+### Section 7
+- 導入 [`Flask-Migrate`](https://pypi.org/project/Flask-Migrate/)
+- `flask db init`
