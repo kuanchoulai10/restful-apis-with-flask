@@ -93,5 +93,5 @@
 - 導入 [`Flask-Uploads`](https://pypi.org/project/Flask-Uploads/)，實作圖片、大頭貼上傳、下載、刪除等功能（使用 `UploadSet`, `FileStorage`等）。
 
 ### Section 7
-- 導入 [`Flask-Migrate`](https://pypi.org/project/Flask-Migrate/)
-- `flask db init`
+- 導入 [`Flask-Migrate`](https://pypi.org/project/Flask-Migrate/)，對資料庫進行版本控制，新增、刪除、修改其細節。
+- 常見指令如 `flask db init`, `flask db upgrade`, `flask db downgrade`等。
