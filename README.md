@@ -95,3 +95,9 @@
 ### Section 7
 - 導入 [`Flask-Migrate`](https://pypi.org/project/Flask-Migrate/)，對資料庫進行版本控制，新增、刪除、修改其細節。
 - 常見指令如 `flask db init`, `flask db upgrade`, `flask db downgrade`等。
+
+### Section 8
+- 了解 OAuth 第三方登入的流程（以 GitHub 為例），包括了認證和授權，取得 `access_token` 等。
+- 導入 [`Flask-OAuthlib`](https://pypi.org/project/Flask-OAuthlib/)。
+- 使用 `Flask` 的 `g` 來儲存 `access_token`。
+- 允許使用第三方登入的使用者設定密碼。
