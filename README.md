@@ -64,7 +64,7 @@
 
 
 ## Advance
-內容源自於 Udemy "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 線上課程。
+[證書](https://www.udemy.com/certificate/UC-83539bac-10d7-4eaf-bd15-1346dc2fe21b/)，內容源自於 Udemy "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 線上課程。
 
 ### Section 1
 為了接下來的課程內容，做了幾項事情準備：
@@ -101,3 +101,7 @@
 - 導入 [`Flask-OAuthlib`](https://pypi.org/project/Flask-OAuthlib/)。
 - 使用 `Flask` 的 `g` 來儲存 `access_token`。
 - 允許使用第三方登入的使用者設定密碼。
+
+### Section 9
+- 介接 `Stripe` 第三方支付系統。
+- 增加「訂單」資源，以 `Flask-SQLAlhemy` 實作多對多關聯。
