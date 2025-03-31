@@ -1,107 +1,106 @@
 # REST APIs with Flask
-以 Flask 建立符合 REST 風格的 API 伺服器應用程式。
+Build RESTful API server applications with Flask.
 
 ## Basics
-[證書](https://www.udemy.com/certificate/UC-7fddb0fd-9c04-4579-86f5-7b9dda42f9b3/)，內容源自於 Udemy 的 "[REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/)" 線上課程。
+[Certificate](https://www.udemy.com/certificate/UC-7fddb0fd-9c04-4579-86f5-7b9dda42f9b3/), content based on the Udemy course "[REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/)".
 
 ### Section 3
-- 初探 Flask 網頁框架，以 decorator 設定網頁應用程式的 route。
-- 了解 GET, POST, PUT, DELETE 等常見的 HTTP 請求方法。
-- 了解 200, 201, 202, 401, 404 等常見的 HTTP 狀態碼。
-- 了解 RESTful API 設計需聚焦在「資源」(resource) 並且符合無狀態的(stateless)特性。
-- 實作 RESTful API 伺服器應用程式。
-- 以 Postman 應用程式進行 API 測試。
+- Introduction to the Flask web framework, using decorators to set up application routes.
+- Understanding common HTTP request methods: GET, POST, PUT, DELETE.
+- Understanding common HTTP status codes: 200, 201, 202, 401, 404.
+- Understanding RESTful API design principles focusing on "resources" and statelessness.
+- Implementing a RESTful API server application.
+- Testing APIs using the Postman application.
 
 ### Section 4
-- 以 [`Flask-RESTful`](https://pypi.org/project/Flask-RESTful/) 實作 RESTful API 伺服器應用程式。
-- 以 [`Flask-JWT`](https://pypi.org/project/Flask-JWT/) 實作 JSON Web Token (JWT) 使用者驗證機制。
-- 使用 `RequestParser` 解析使用者輸入的 JSON 資料。
+- Implementing RESTful API server applications using [`Flask-RESTful`](https://pypi.org/project/Flask-RESTful/).
+- Implementing JSON Web Token (JWT) authentication using [`Flask-JWT`](https://pypi.org/project/Flask-JWT/).
+- Parsing user input JSON data using `RequestParser`.
 
 ### Section 5
-- 導入 `sqlite3`，改為從資料庫存取使用者和商品資訊。
-- 實作使用者註冊機制。
+- Introducing `sqlite3` to store user and item information in a database.
+- Implementing user registration functionality.
 
 ### Section 6
-- 導入 [`Flask-SQLAlchemy`](https://pypi.org/project/flask-sqlalchemy/)，以 ORM 機制操作資料庫。
-- 加入商店資訊，與商品為一對多的關聯關係。
+- Introducing [`Flask-SQLAlchemy`](https://pypi.org/project/flask-sqlalchemy/) to interact with the database using ORM.
+- Adding store information with a one-to-many relationship to items.
 
 ### Section 8
-將 Flask 應用程式部署在 Heroku 上，並使用 Heroku 提供的 PostgresSQL，步驟：
-1. 在本機端增修專案內容，如加入 `Procfile`, `runtime.txt`, `uwsgi.ini`等，接著 `commit` 並 `push` 至 GitHub 上的指定 repo。
-2. 在 Heroku 官方網站註冊帳號，接著創建一個應用程式並與 GitHub 指定 repo 連線，再來加入 buildpack `heroku/python` 和 add-ons `Heroku Postgres`。
-3. 在本機端安裝 Heroku CLI（參考[這裡](https://devcenter.heroku.com/articles/heroku-cli)）並透過 `heroku login` 指令登入 Heroku。
-4. 在本機端透過 `heroku git:remote -a <app-name>` 指令，加入 Heroku 遠端節點。
-5. 在本機端透過 `git subtree push --prefix basics/section8 heroku master` 指令，將當前專案內容的子目錄 `push` 至 Heroku 的遠端節點並部署上線。
+Deploying the Flask application to Heroku and using Heroku's PostgreSQL. Steps:
+1. Modify the project locally (e.g., add `Procfile`, `runtime.txt`, `uwsgi.ini`), then `commit` and `push` to the specified GitHub repo.
+2. Register on Heroku, create an application, connect it to the GitHub repo, and add the `heroku/python` buildpack and `Heroku Postgres` add-on.
+3. Install the Heroku CLI locally (see [here](https://devcenter.heroku.com/articles/heroku-cli)) and log in using `heroku login`.
+4. Add a Heroku remote using `heroku git:remote -a <app-name>`.
+5. Deploy the project by pushing the `basics/section8` subdirectory to Heroku using `git subtree push --prefix basics/section8 heroku master`.
 
-測試：
-連線至[這裡](http://rest-apis-with-flask.herokuapp.com/stores)，取得資料庫當中所有的商店及其商品，以 `JSON` 格式回傳。
+Testing:
+Access [here](http://rest-apis-with-flask.herokuapp.com/stores) to retrieve all stores and their items in the database, returned in JSON format.
 
 ### Section 9
-將 Flask 應用程式部署在 DigitalOcean 提供的 Droplet 虛擬主機上，步驟：
-1. 註冊 DigitalOcean 帳號並創建個 Droplet 虛擬主機，作業系統為 Ubuntu 16.04，接著設定 SSH 連線，在本機端使用 PuTTY 以 SSH 連線至遠端虛擬主機。
-2. 在作業系統當中創建一個新的使用者。
-3. 安裝並設定 PostgreSQL 資料庫，包括在 PostgreSQL 當中創建新使用者以及資料庫，並設定相關權限。
-4. 安裝並設定 Nginx 伺服器，包括防火牆設定、錯誤頁面、uwsgi 參數等。
-5. 設定 Python 虛擬環境，接著安裝專案所需套件，並把專案內容從 GitHub `clone` 下來。
-6. 設定個 Ubuntu 服務，用來開啟 uwsgi 伺服器，負責執行我們的 Flask 應用程式，包括日誌檔儲存目錄、跑幾個程序、幾個執行緒等。
+Deploying the Flask application to a DigitalOcean Droplet. Steps:
+1. Register on DigitalOcean, create a Droplet with Ubuntu 16.04, set up SSH, and connect using PuTTY.
+2. Create a new user on the operating system.
+3. Install and configure PostgreSQL, including creating a new user and database with appropriate permissions.
+4. Install and configure the Nginx server, including firewall settings, error pages, and uwsgi parameters.
+5. Set up a Python virtual environment, install required packages, and clone the project from GitHub.
+6. Configure an Ubuntu service to run the uwsgi server, including log directories, processes, and threads.
 
-測試：
-連線至[這裡](http://64.225.122.125/stores)（創建日期 2020/05/30），取得資料庫當中所有的商店及其商品，以 `JSON` 格式回傳。
+Testing:
+Access [here](http://64.225.122.125/stores) (created on 2020/05/30) to retrieve all stores and their items in the database, returned in JSON format.
 
 ### Section 10
-[電子書](https://school-of-code.gitbooks.io/rest-apis-with-flask-and-python/content/domains-and-https/what-is-a-domain.html)
-- 註冊域名、設定 DNS 伺服器。
-- 取得 SSL 數位憑證，以 https 通訊協定連線，設置 Nginx。
+[Book](https://school-of-code.gitbooks.io/rest-apis-with-flask-and-python/content/domains-and-https/what-is-a-domain.html)
+- Registering a domain and configuring DNS servers.
+- Obtaining an SSL certificate for HTTPS communication and configuring Nginx.
 
 ### Section 11
-導入 [`Flask-JWT-Extended`](https://pypi.org/project/Flask-JWT-Extended/)：
-- 實作 token-refreshing 機制，提升用戶瀏覽體驗，不需要定期重新輸入帳號密碼，同時設定重要操作時仍需重新登入，提升安全性（使用 `@jwt_refresh_token_required`, `create_refresh_token()`, `create_access_token()` 等）。
-- 針對各個權限的請求，如訪客、一般使用者、管理員，回應相對應的資料（使用 `@jwt.user_claims_loader`, `@jwt_optional`, `get_jwt_claims()` 等）。
-- 針對各個權限錯誤的請求，回傳相對應的錯誤訊息（使用 `@jwt.expired_token_loader`, `@jwt.invalid_token_loader`, `@jwt.needs_fresh_token_loader` 等）。
-- 以黑名單（blacklist）設定，實作登出機制（使用 `@jwt.token_in_blacklist_loader`, `get_raw_jwt()` 等）。
+Introducing [`Flask-JWT-Extended`](https://pypi.org/project/Flask-JWT-Extended/):
+- Implementing token-refreshing to improve user experience by avoiding frequent logins while requiring re-login for critical actions for security (using `@jwt_refresh_token_required`, `create_refresh_token()`, `create_access_token()`).
+- Responding with appropriate data based on user roles (visitor, user, admin) using `@jwt.user_claims_loader`, `@jwt_optional`, `get_jwt_claims()`.
+- Returning specific error messages for token-related issues using `@jwt.expired_token_loader`, `@jwt.invalid_token_loader`, `@jwt.needs_fresh_token_loader`.
+- Implementing a logout mechanism using a blacklist (with `@jwt.token_in_blacklist_loader`, `get_raw_jwt()`).
 
-[電子書](https://arac.tecladocode.com/)
+[Book](https://arac.tecladocode.com/)
 
-
-## Advance
-[證書](https://www.udemy.com/certificate/UC-83539bac-10d7-4eaf-bd15-1346dc2fe21b/)，內容源自於 Udemy "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)" 線上課程。
+## Advanced
+[Certificate](https://www.udemy.com/certificate/UC-83539bac-10d7-4eaf-bd15-1346dc2fe21b/), content based on the Udemy course "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)".
 
 ### Section 1
-為了接下來的課程內容，做了幾項事情準備：
-- 簡化驗證機制。
-- 加入 type hinting。
-- 統一程式碼風格。
-- 所有 `Resource` 的方法統一改為類別方法（使用 `@classmethod`）。
+Preparations for the course:
+- Simplified authentication mechanism.
+- Added type hinting.
+- Unified code style.
+- Changed all `Resource` methods to class methods (using `@classmethod`).
 
 ### Section 2
-導入 [`marshmallow`](https://pypi.org/project/marshmallow/), [`flask-marshmallow`](https://pypi.org/project/flask-marshmallow/) 和 [`marshmallow-sqlalchemy`](https://pypi.org/project/marshmallow-sqlalchemy/)：
-- 透過定義好每個 `Resource` 的 `Schema`，簡化「請求解析」、「創建 `Model` 物件」、「回傳 JSON」的過程。
+Introducing [`marshmallow`](https://pypi.org/project/marshmallow/), [`flask-marshmallow`](https://pypi.org/project/flask-marshmallow/), and [`marshmallow-sqlalchemy`](https://pypi.org/project/marshmallow-sqlalchemy/):
+- Simplified request parsing, `Model` object creation, and JSON responses by defining `Schema` for each `Resource`.
 
 ### Section 3
-- 實作使用者電子信箱認證流程（使用 [Mailgun](https://www.mailgun.com/) 服務）。
-- 在專案中使用 `.env` 檔案儲存敏感資料。
-- 在 [`Flask-RESTful`](https://pypi.org/project/Flask-RESTful/) 框架中回傳 `.html` 檔案（使用 `make_response()` 和 `render_template()`）。
+- Implemented user email verification process (using [Mailgun](https://www.mailgun.com/)).
+- Used `.env` files to store sensitive data.
+- Returned `.html` files in [`Flask-RESTful`](https://pypi.org/project/Flask-RESTful/) using `make_response()` and `render_template()`.
 
 ### Section 4
-優化使用者電子信箱認證流程：
-- 有效認證期限、重傳認證信。
-- 專案程式架構優化（抽出 `confirmation` 功能作為「資源」看待）。
+Optimized the email verification process:
+- Added expiration for verification and resend functionality.
+- Refactored project structure by treating `confirmation` as a resource.
 
 ### Section 6
-- 以更安全的方式配置應用程式（使用 `from_object()` 和 `from_envvar()`等）。
-- 瞭解 `WSGI`, `uwsgi`, `uWSGI`, `Werkzeug` 之間的關係。
-- 導入 [`Flask-Uploads`](https://pypi.org/project/Flask-Uploads/)，實作圖片、大頭貼上傳、下載、刪除等功能（使用 `UploadSet`, `FileStorage`等）。
+- Configured the application more securely (using `from_object()` and `from_envvar()`).
+- Learned the relationships between `WSGI`, `uwsgi`, `uWSGI`, and `Werkzeug`.
+- Introduced [`Flask-Uploads`](https://pypi.org/project/Flask-Uploads/) for handling file uploads, downloads, and deletions (using `UploadSet`, `FileStorage`).
 
 ### Section 7
-- 導入 [`Flask-Migrate`](https://pypi.org/project/Flask-Migrate/)，對資料庫進行版本控制，新增、刪除、修改其細節。
-- 常見指令如 `flask db init`, `flask db upgrade`, `flask db downgrade`等。
+- Introduced [`Flask-Migrate`](https://pypi.org/project/Flask-Migrate/) for database version control, including adding, deleting, and modifying details.
+- Common commands include `flask db init`, `flask db upgrade`, `flask db downgrade`.
 
 ### Section 8
-- 了解 OAuth 第三方登入的流程（以 GitHub 為例），包括了認證和授權，取得 `access_token` 等。
-- 導入 [`Flask-OAuthlib`](https://pypi.org/project/Flask-OAuthlib/)。
-- 使用 `Flask` 的 `g` 來儲存 `access_token`。
-- 允許使用第三方登入的使用者設定密碼。
+- Learned OAuth third-party login flow (e.g., GitHub), including authentication, authorization, and obtaining `access_token`.
+- Introduced [`Flask-OAuthlib`](https://pypi.org/project/Flask-OAuthlib/).
+- Used Flask's `g` to store `access_token`.
+- Allowed third-party login users to set passwords.
 
 ### Section 9
-- 介接 `Stripe` 第三方支付系統。
-- 增加「訂單」資源，以 `Flask-SQLAlhemy` 實作多對多關聯。
+- Integrated `Stripe` for third-party payment processing.
+- Added an "Order" resource and implemented many-to-many relationships using `Flask-SQLAlchemy`.
