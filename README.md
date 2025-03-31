@@ -1,8 +1,14 @@
 # REST APIs with Flask
 Build RESTful API server applications with Flask.
 
+## Summary
+
+This repository documents my journey of learning how to build RESTful APIs using Flask. It includes step-by-step implementations of various concepts, from basic API design principles to advanced features like authentication, database integration, deployment, and third-party integrations. The content is based on two Udemy courses: "[REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/)" and "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python/)". Each section highlights key topics, tools, and techniques, making it a comprehensive resource for anyone looking to learn Flask for API development.
+
 ## Basics
-[Certificate](https://www.udemy.com/certificate/UC-7fddb0fd-9c04-4579-86f5-7b9dda42f9b3/), content based on the Udemy course "[REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/)".
+![](https://udemy-certificate.s3.amazonaws.com/image/UC-7fddb0fd-9c04-4579-86f5-7b9dda42f9b3.jpg?v=1591262821000)
+
+[Certificate](https://www.udemy.com/certificate/UC-7fddb0fd-9c04-4579-86f5-7b9dda42f9b3/)
 
 ### Section 3
 - Introduction to the Flask web framework, using decorators to set up application routes.
@@ -63,7 +69,10 @@ Introducing [`Flask-JWT-Extended`](https://pypi.org/project/Flask-JWT-Extended/)
 [Book](https://arac.tecladocode.com/)
 
 ## Advanced
-[Certificate](https://www.udemy.com/certificate/UC-83539bac-10d7-4eaf-bd15-1346dc2fe21b/), content based on the Udemy course "[Advanced REST APIs with Flask and Python](https://www.udemy.com/course/advanced-rest-apis-flask-python)".
+
+![](https://udemy-certificate.s3.amazonaws.com/image/UC-83539bac-10d7-4eaf-bd15-1346dc2fe21b.jpg?v=1593842868000)
+
+[Certificate](https://www.udemy.com/certificate/UC-83539bac-10d7-4eaf-bd15-1346dc2fe21b/)
 
 ### Section 1
 Preparations for the course:
