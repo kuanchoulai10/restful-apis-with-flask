@@ -23,6 +23,7 @@
 
 ## Section 7: Deploying to Heroku
 Deploying the Flask application to Heroku and using Heroku's PostgreSQL. Steps:
+
 1. Modify the project locally (e.g., add `Procfile`, `runtime.txt`, `uwsgi.ini`), then `commit` and `push` to the specified GitHub repo.
 2. Register on Heroku, create an application, connect it to the GitHub repo, and add the `heroku/python` buildpack and `Heroku Postgres` add-on.
 3. Install the Heroku CLI locally (see [here](https://devcenter.heroku.com/articles/heroku-cli)) and log in using `heroku login`.
@@ -34,6 +35,7 @@ Access [here](http://rest-apis-with-flask.herokuapp.com/stores) to retrieve all 
 
 ## Section 8: Deploying to DigitalOcean
 Deploying the Flask application to a DigitalOcean Droplet. Steps:
+
 1. Register on DigitalOcean, create a Droplet with Ubuntu 16.04, set up SSH, and connect using PuTTY.
 2. Create a new user on the operating system.
 3. Install and configure PostgreSQL, including creating a new user and database with appropriate permissions.
@@ -46,11 +48,13 @@ Access [here](http://64.225.122.125/stores) (created on 2020/05/30) to retrieve 
 
 ## Section 9: Domain and HTTPS
 [Book](https://school-of-code.gitbooks.io/rest-apis-with-flask-and-python/content/domains-and-https/what-is-a-domain.html)
+
 - Registering a domain and configuring DNS servers.
 - Obtaining an SSL certificate for HTTPS communication and configuring Nginx.
 
 ## Section 11: Advanced JWT Features
 Introducing [`Flask-JWT-Extended`](https://pypi.org/project/Flask-JWT-Extended/):
+
 - Implementing token-refreshing to improve user experience by avoiding frequent logins while requiring re-login for critical actions for security (using `@jwt_refresh_token_required`, `create_refresh_token()`, `create_access_token()`).
 - Responding with appropriate data based on user roles (visitor, user, admin) using `@jwt.user_claims_loader`, `@jwt_optional`, `get_jwt_claims()`.
 - Returning specific error messages for token-related issues using `@jwt.expired_token_loader`, `@jwt.invalid_token_loader`, `@jwt.needs_fresh_token_loader`.

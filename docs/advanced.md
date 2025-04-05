@@ -2,6 +2,7 @@
 
 ## Section 1: Course Preparations
 Preparations for the course:
+
 - Simplified authentication mechanism.
 - Added type hinting.
 - Unified code style.
@@ -9,6 +10,7 @@ Preparations for the course:
 
 ## Section 2: Marshmallow Integration
 Introducing [`marshmallow`](https://pypi.org/project/marshmallow/), [`flask-marshmallow`](https://pypi.org/project/flask-marshmallow/), and [`marshmallow-sqlalchemy`](https://pypi.org/project/marshmallow-sqlalchemy/):
+
 - Simplified request parsing, `Model` object creation, and JSON responses by defining `Schema` for each `Resource`.
 
 ## Section 3: Email Verification
@@ -18,6 +20,7 @@ Introducing [`marshmallow`](https://pypi.org/project/marshmallow/), [`flask-mars
 
 ## Section 4: Optimized Email Verification
 Optimized the email verification process:
+
 - Added expiration for verification and resend functionality.
 - Refactored project structure by treating `confirmation` as a resource.
 
