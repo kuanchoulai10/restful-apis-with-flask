@@ -1,4 +1,4 @@
-# Flask Basics
+# Basics
 
 ## Section 3: Introduction to Flask
 - Introduction to the Flask web framework, using decorators to set up application routes.

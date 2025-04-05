@@ -1,4 +1,4 @@
-# Advanced Flask Features
+# Advanced
 
 ## Section 1: Course Preparations
 Preparations for the course:
