@@ -1,4 +1,4 @@
-# RESTful APIs with Flask
+# [RESTful APIs with Flask](https://github.com/kuanchoulai10/restful-apis-with-flask)
 
 This repository documents my journey of learning how to build RESTful APIs using Flask. It includes step-by-step implementations of various concepts, from basic API design principles to advanced features like authentication, database integration, deployment, and third-party integrations. 
 
